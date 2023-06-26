@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+    <head> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript"src= "{% static 'JS/Add a new employee.js' %}"defer></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'style/mystylesheet.css' %}"></link>
+    </head>
+    <body class="body4"> 
+        
+        <nav>
+            <ul>
+                <li><a href="{% url 'add a new employee' %}">ADD NEW EMPLOYEE</a></li>
+                <li><a href="{% url 'search' %}">SEARCH</a></li>
+                <li><a href="{% url 'vacation form' %}">SUBMITT A VACATION</a></li>
+                <li><a href="{% url 'update an existing employee' %}">UPDATE &amp; DELETE</a></li>
+                <li><a href="{% url 'submitted vacations' %}">VIEW ALL VACATIONS</a></li>
+                <li><a href="{% url 'Home' %}">HOME</a></li>
+            </ul>
+          </nav>
+        <p>
+            <form>  
+                <label> Name</label> <input type="text" id="username" placeholder="name" required></li><br>
+                <label> Enter id</label> <input type="number" id="ID" required></li><br>
+                <label> Enter Email</label><input type="email" id="email"></li><br>
+                <Label> Enter Phone Number</Label>  <input type="tel" id="Pnumber" placeholder="xxxxxxxxxxx"></li><br>
+                <Label> Enter Address</Label> <input type="text" id="add" ></li><br>
+                <Label> Gender type</Label> </li><br>
+                <input type=RADIO name="M" required> Male 
+                <input type=RADIO name="M" required>Female<br>
+                <Label> Marital statues</Label>  </li><br>
+                <input type=RADIO name="r" required>Single
+                <input type=RADIO name="r" required>Married<br>
+                <Label> Number of available vacation days </Label> <input type="number" id="available days" required></li><br>
+                <label> Number of actual approved vacation days </label>  <input type="number" id="approved days" required></li><br>
+                <label>Salary</label>  <input type="number" id="S" required> </li><br>
+                <label> Date of birth</label>  <input type="date" id="DOB"  required></li><br>
+                <input  value="submit" onclick="addemployee()"style="background-color: cornflowerblue">
+                <input type="reset" value="Reset" style="background-color: cornflowerblue"> 
+             </form>
+         
+        </p>
+    </body>
+</html>

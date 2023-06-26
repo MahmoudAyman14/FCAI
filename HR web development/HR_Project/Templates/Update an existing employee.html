@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+    <head> 
+      <link rel="stylesheet" type="text/css" href="{% static 'style/mystylesheet.css' %}"></link>
+    </head>
+    <body class="body1">
+        <nav>
+            <ul>
+              
+              <li><a href="{% url 'add a new employee' %}">ADD NEW EMPLOYEE</a></li>
+              <li><a href="{% url 'search' %}">SEARCH</a></li>
+              <li><a href="{% url 'vacation form' %}">SUBMITT A VACATION</a></li>
+              <li><a href="{% url 'update an existing employee' %}">UPDATE &amp; DELETE</a></li>
+              <li><a href="{% url 'submitted vacations' %}">VIEW ALL VACATIONS</a></li>
+              <li><a href="{% url 'Home' %}">HOME</a></li>
+            </ul>
+          </nav>
+        <p>
+         <form>
+          <div class="search-box">
+            <input type="text" name="" value="" placeholder="Mohamed Salah" style="width: fit-content;">
+            <input type="submit" onclick="document.location='Vacations.html'"value="SEARCH" style="width: fit-content;" >
+              </div>
+            <label> Name</label><input type="text" placeholder="name" required></li><br>
+            <label> Enter id</label><input type="number" required></li><br>
+            <label> Enter Email</label><input type="email" ></li><br>
+            <Label> Enter Phone Number</Label><input type="tel" placeholder="xxxxxxxxxxx"></li><br>
+            <Label> Enter Address</Label><input type="text"></li><br>
+            <Label> Gender type</Label></li><br>
+            <input type=RADIO name="M" required>Male
+            <input type=RADIO name="M" required>Female<br>
+            <Label> marital statues</Label></li><br>
+            <input type=RADIO name="r" required>Single
+            <input type=RADIO name="r" required>Married<br>
+            <Label> Number of available vacation days</Label><input type="number" required></li><br>
+            <label> Number of actual approved vacation days</label> <input type="number" required></li><br>
+            <label>Salary</label><input type="number" required> </li><br>
+            <label> Date of birth</label><input type="date" value="25-5-2001" required></li><br>
+            <input type="submit" style="background-color: cornflowerblue">
+            <input type="reset" value="Reset" style="background-color: cornflowerblue"> 
+         </form>
+         
+        </p>
+    </body>
+</html>

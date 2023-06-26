@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+    <head> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript"src= "{% static 'JS/Vacation form.js' %}"defer></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'style/mystylesheet.css' %}"></link>
+    </head>
+    <body class="body2"> 
+        
+        <nav>
+            <ul>
+                <li><a href="{% url 'add a new employee' %}">ADD NEW EMPLOYEE</a></li>
+                <li><a href="{% url 'search' %}">SEARCH</a></li>
+                <li><a href="{% url 'vacation form' %}">SUBMITT A VACATION</a></li>
+                <li><a href="{% url 'update an existing employee' %}">UPDATE &amp; DELETE</a></li>
+                <li><a href="{% url 'submitted vacations' %}">VIEW ALL VACATIONS</a></li>
+                <li><a href="{% url 'Home' %}">HOME</a></li>
+            </ul>
+          </nav>
+        <p>
+            <form>  
+              <label> Name</label> <input type="text" id="name" placeholder="name" required></li><br>
+              <label> Enter ID</label> <input type="number" id="ID" required></li><br>
+              <label> Reason</label><input type="text" id="vacationreason"></li><br>
+              <label> from Date</label>  <input type="date" id="fdate"  required></li>
+              <label> to Date</label>  <input type="date" id="tdate"  required></li><br>
+
+              <input value="submit" onclick="submitvacation()"style="background-color: cornflowerblue">
+              <input type="reset" value="Reset" style="background-color: cornflowerblue"> 
+             </form>
+         
+        </p>
+    </body>
+</html>

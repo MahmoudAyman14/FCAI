@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static 'style/mystylesheet.css' %}"></link>
+    <meta charset="utf-8">
+    <title>HOME</title>
+  </head>
+  <style media="screen">
+  </style>
+  <body style=" background-image:url(/static/MBA-HR-syllabus.jpg) ">
+    <nav>
+      <ul>
+        <li><a href="{% url 'add a new employee' %}">ADD NEW EMPLOYEE</a></li>
+        <li><a href="{% url 'search' %}">SEARCH</a></li>
+        <li><a href="{% url 'vacation form' %}">SUBMITT A VACATION</a></li>
+        <li><a href="{% url 'update an existing employee' %}">UPDATE &amp; DELETE</a></li>
+        <li><a href="{% url 'submitted vacations' %}">VIEW ALL VACATIONS</a></li>
+        <li><a href="{% url 'Home' %}">HOME</a></li>
+      </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="main-div">
+      <h1 style="color:rgb(56 179 73)">FACULTY OF COMPUTERS AND ARTIFICIAL INTELLIGENCE</h1>
+      <h4 style="color:rgb(56 179 73)">CAIRO UNIVERSITY</h4>
+      <p  style="color:rgb(56 179 73)"><b>This is the main website of FCAI-CU Human Resources</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+  </body>
+</html>

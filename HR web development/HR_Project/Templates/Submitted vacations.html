@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+    <head> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript"src= "{% static 'JS/submitted vacations.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'style/mystylesheet.css' %}"></link>
+    </head>
+    <body class="body0" onload="render()">
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'add a new employee' %}">ADD NEW EMPLOYEE</a></li>
+                <li><a href="{% url 'search' %}">SEARCH</a></li>
+                <li><a href="{% url 'vacation form' %}">SUBMITT A VACATION</a></li>
+                <li><a href="{% url 'update an existing employee' %}">UPDATE &amp; DELETE</a></li>
+                <li><a href="{% url 'submitted vacations' %}">VIEW ALL VACATIONS</a></li>
+                <li><a href="{% url 'Home' %}">HOME</a></li>
+            </ul>
+          </nav>
+       
+        <div id="vacation" >
+
+        </div>
+    </body>
+</html> 
