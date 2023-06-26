@@ -1,0 +1,22 @@
+# bc_simple_rules.krb
+
+kind_Childhood_Disintegrative_disorder
+    use Childhood_Disintegrative_disorder(True)
+    when
+	facts.Social_skills_and_adaptive_behaviors(True)
+
+kind_Aspergers_syndrome
+    use Aspergers_syndrome(True)
+    when
+	facts.Lack_of_facial_expressions(True)
+
+kind_Autistic_Disorder
+    use Autistic_Disorder(True)
+    when
+	facts.Language_delays(True)
+
+
+kind_Pervasive_Developmental_Disorder
+    use Pervasive_Developmental_Disorder(True)
+    when
+	facts.Repeating_gestures_or_sounds(True)

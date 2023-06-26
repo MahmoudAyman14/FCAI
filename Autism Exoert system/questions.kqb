@@ -1,0 +1,92 @@
+# questions.kqb
+
+any_symptoms($ans)
+     Are any of the following symptoms currently occurring?
+     ---
+   $ans = select_1
+             1: Lack of facial expressions
+             2: Language delays
+	     3: Repeating gestures or sounds
+	     4:Social skills and adaptive behaviors
+		               Thank goodness!
+
+
+
+Patient_age($ans)
+    Is the patients age from two to four?
+    ---
+    $ans = yn
+
+
+Difficulty_making_friends($ans)
+	Do you have difficulty for making friends ?
+	---
+	$ans = yn
+
+epilepsy_patient($ans)
+    Did the patient have epilepsy?
+    ---
+    $ans = yn
+
+
+Selective_silence($ans)
+	Do you have selective silence ?
+	---
+	$ans = yn
+
+
+social_anxiety($ans)
+     Do you have social anxiety?
+     ---
+     $ans = yn
+
+Difficulty_or_severe_need_for_eye_contact($ans)
+      Do you have difficulty or severe need for eye contact?
+      ---
+      $ans = yn
+
+Extreme_focus_on_specific_interests($ans)
+      Do you suffer from extreme focus on specific interests?
+      ---
+      $ans = yn
+
+
+Find_patterns_and_symmetry($ans)
+      Do you find patterns and symmetry?
+      ---
+      $ans = yn
+
+
+Stick_to_the_routine($ans)
+      Do you stick to the routine?
+      ---
+      $ans = yn
+
+Intellectual_disability($ans)
+     Do you suffer from any disability?
+     ---
+     $ans = yn
+
+Language_delays($ans)
+
+    Do you suffer from language delays?
+    ---
+    $ans = yn
+
+Have_trouble_controlling_emotions($ans)
+
+    Do you have trouble controlling emotions?
+    ---
+    $ans = yn
+
+
+Find_it_hard_to_keep_up_a_conversation($ans)
+    Do you find a trouble to keep up a conversation with people?
+    ---
+    $ans = yn
+
+
+Have_a_flat_voice($ans)
+    Do you have a flat voice?
+    ---
+    $ans = yn

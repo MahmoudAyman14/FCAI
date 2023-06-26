@@ -1,0 +1,54 @@
+# bc_simple_rules_questions.krb
+
+
+kind_Childhood_Disintegrative_disorder
+    use kind("Childhood Disintegrative disorder")
+    when
+       questions.Patient_age(True)
+       questions.epilepsy_patient(True)
+
+
+
+
+
+kind_Aspergers_syndrome
+    use kind("Aspergers syndrome")
+    when
+        questions.Difficulty_making_friends(True)
+        questions.Selective_silence(True)
+        questions.Find_patterns_and_symmetry(True)
+        questions.social_anxiety(True)
+        questions.Stick_to_the_routine(True)
+        questions.Extreme_focus_on_specific_interests(True)
+        questions.Difficulty_or_severe_need_for_eye_contact(True)
+
+
+
+
+kind_Autistic_Disorder
+    use kind("Autistic Disorder")
+    when
+
+
+        questions.social_anxiety(True)
+        questions.Extreme_focus_on_specific_interests(True)
+        questions.Stick_to_the_routine(True)
+        questions.Intellectual_disability(True)
+        questions.Language_delays($ans)
+        check $ans in (True,False)
+
+
+kind_Pervasive_Developmental_Disorder
+    use kind("Pervasive Developmental Disorder")
+    when
+        questions.Have_trouble_controlling_emotions(True)
+        questions.Find_it_hard_to_keep_up_a_conversation(True)
+        questions.Have_a_flat_voice($ans)
+        check $ans in (True,False)
+
+
+
+
+
+
+
