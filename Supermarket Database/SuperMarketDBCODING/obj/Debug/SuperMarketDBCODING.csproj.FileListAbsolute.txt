@@ -1,0 +1,12 @@
+C:\Users\moham\Desktop\SuperMarketDBCODING\bin\Debug\SuperMarketDBCODING.exe.config
+C:\Users\moham\Desktop\SuperMarketDBCODING\bin\Debug\SuperMarketDBCODING.exe
+C:\Users\moham\Desktop\SuperMarketDBCODING\bin\Debug\SuperMarketDBCODING.pdb
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.csproj.AssemblyReference.cache
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.csproj.SuggestedBindingRedirects.cache
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.Form1.resources
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.Properties.Resources.resources
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.csproj.GenerateResource.cache
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.csproj.CoreCompileInputs.cache
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.exe
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.pdb
+C:\Users\moham\Desktop\SuperMarketDBCODING\obj\Debug\SuperMarketDBCODING.Form2.resources
