@@ -1,0 +1,96 @@
+//13 components used in the circuit
+//3x 4x1mux
+//3x 2x1mux
+//3x full adder
+//3x notgate
+//1x andgate
+module half_adder(output sum, output carry, input a, input b); //structure of half_adder
+  xor(sum, a, b);
+  and(carry, a, b);
+endmodule
+
+module full_adder(output sum, output carry, input x, input y, input z); //structure of full_adder using 2 half_adders
+  wire s1, c1, c2;
+  half_adder h1(s1, c1, x, y);
+  half_adder h2(sum, c2, s1, z);
+  or(carry, c1, c2);
+endmodule
+
+module m21(output Y, input D0,input D1,input S);//structure of 2x1 mux
+and(T1, D1, S);
+not(T2, S);
+and(T3, D0, T2);
+or(Y, T1, T3);
+endmodule
+
+module m41(output out, input a, input b,input c,input d,input s0,input s1); //structure of 4x1 mux as figure 2-4 in the book.
+wire s0bar, s1bar, T1, T2, T3;
+not(s1bar, s1);
+not(s0bar, s0);
+and(T1, a, s0bar, s1bar);
+and(T2, b, s0, s1bar);
+and(T3, c, s0bar, s1);
+and(T4, d, s0, s1);
+or(out, T1, T2, T3, T4);
+endmodule
+
+module circuit (G, a, b ,s0, s1); //building the main circuit
+output [2:0]G ; //declare output as 3-bit
+input [2:0] a, b; // declaring the operand variables as 3-bit input
+input s0, s1; // declaring the selection variables
+
+wire outS1,outM21_1,Bbar1,Bbar2,Bbar3,outM41_1,c1,c2; //wires to pass signals between the components
+
+//calculating the first bit of the output
+and(outS1,s0,s1);
+m21 mux2_1(outM21_1,a[0],1'b1,outS1);
+not(Bbar1,b[0]);
+m41 mux4_1(outM41_1,1'b1,b[0],Bbar1,Bbar1,s0,s1);
+full_adder f1(G[0],c1,s1,outM41_1,outM21_1);
+
+//calculating the second bit of the output
+m21 mux2_2(outM21_2,a[1],1'b1,outS1);
+not(Bbar2,b[1]);
+m41 mux4_2(outM41_2,1'b1,b[1],Bbar2,Bbar2,s0,s1);
+full_adder f2(G[1],c2,c1,outM41_2,outM21_2);
+
+//calculating the third bit of the output
+
+m21 mux2_3(outM21_3,a[2],1'b1,outS1);
+not(Bbar3,b[2]);
+m41 mux4_3(outM41_3,1'b1,b[2],Bbar3,Bbar3,s0,s1);
+full_adder f3(G[2],c3,c2,outM41_3,outM21_3);
+
+endmodule
+
+module circuitTest; //testBench
+
+wire outS1,outM21_1,Bbar1,Bbar2,Bbar3,outM41_1,c1,c2; //signals between components used in circuit as wires
+output [2:0]G; //declare G as 3-bit output
+reg  [2:0]a; //declare a as 3-bit input
+reg  [2:0]b; //declare b as 3-bit input
+reg s0, s1; // declare s0 & s1 as 1-bit input
+
+circuit obj(.G(G), .a(a), .b(b), .s0(s0), .s1(s1)); //intialize object of type circuit & and passing parameters
+integer k,i,s,ab;
+initial begin
+  s1=0; s0=0; s=s0+s1; //create a variable to store the two selection inputs
+  a=0; b=0; ab=a+b; //create a variable to store the two operands
+for(k=0; k<4; k+=1) begin //loop for printing the output
+   s = k; //increment k by 1
+   //# for time
+  #10s0=s[0];//set s0 to zeroth element of S
+  #10s1=s[1];//set s1 to first element of S
+for (i=0; i<40; i+=1) begin //120 testcase
+ab = i; //increment ab by 1
+    #10a = ab[2:0];//set a to first 3bits element of ab
+    #10b= ab[5:2];//set a to last 3bits element of ab
+end
+end
+$finish;//stoping the program
+end
+
+always@(a or b or s0 or s1) //if any of the following changes excute:
+$monitor("a = %d \t b = %d | G = %d \t s1 = %d \t s0 = %d ", a,b ,G,s1,s0);//printing
+
+endmodule
