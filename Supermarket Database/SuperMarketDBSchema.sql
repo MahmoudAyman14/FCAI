@@ -1,0 +1,45 @@
+USE SuperMarketDB;
+GO 
+ 
+ CREATE TABLE PRODUCT
+(
+  PId INT PRIMARY KEY NOT NULL,
+  PName VARCHAR(64) NOT NULL,
+  PType VARCHAR(64) NOT NULL,
+  Pprice FLOAT NOT NULL,
+  PQuantity INT NOT NULL,
+  PDiscount BIT NOT NULL,
+  Pmonth varchar(64) NOT NULL,
+  quantity_bought int not null 
+);
+
+CREATE TABLE PERSON
+(
+  FirstName VARCHAR(64) NOT NULL,
+  LastName VARCHAR(64) NOT NULL,
+  ID INT PRIMARY KEY NOT NULL,
+  Cflag BIT NOT NULL,
+  Caddress VARCHAR(256),
+  Cphone INT NOT NULL
+);
+
+CREATE TABLE ACCOUNT
+(
+  Username VARCHAR(64) PRIMARY KEY NOT NULL,
+  Apassword VARCHAR(64) NOT NULL,
+  CustomerID INT Not NULL,
+  FOREIGN KEY(CustomerID) REFERENCES PERSON(ID)
+);
+
+CREATE TABLE PURCHASE
+(
+  CustomerId INT NOT NULL,
+  ProductId INT NOT NULL,
+  TotalAmount INT NOT NULL,
+  TotalPrice FLOAT NOT NULL,
+  PMonth INT NOT NULL,
+  Pyear int not null,
+  PurchaseID INT PRIMARY KEY NOT NULL,
+  FOREIGN KEY(Customerid) REFERENCES PERSON (ID),
+  FOREIGN KEY(ProductId) REFERENCES PRODUCT (PId)
+);
