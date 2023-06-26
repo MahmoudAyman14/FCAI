@@ -1,0 +1,1 @@
+Classification MNIST dataset using logistic regression, soft max activation function, Mini batch gradient descent, RmsProb and Adam optimizers all from scratch in SUPERVISED LEARNING course
