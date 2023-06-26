@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1631399869 source:d:\fathy_final_projects\oop\connect_four\main.cpp
+	<iostream>
+	<stdlib.h>
+
