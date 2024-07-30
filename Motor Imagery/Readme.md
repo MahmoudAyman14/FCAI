@@ -1,0 +1,1 @@
+# In this motor imagery BCI task, EEG signals are classified into four categories—left hand, right hand, tongue, or foot—using Wavelet Morlet preprocessing and a CNN deep learning model, achieving a good accuracy 82%.
